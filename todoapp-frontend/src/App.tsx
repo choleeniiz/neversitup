@@ -2,7 +2,6 @@ import './App.css';
 import ErrorBoundary from 'antd/es/alert/ErrorBoundary';
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import Login from './views/Login';
-// import PrivateRoute from './components/PrivateRoute';
 import Todo from './views/todo';
 import { UserStore } from './stores/user.store';
 

@@ -1,7 +1,6 @@
 import { Method } from 'axios'
-import { ILogin } from '../interfaces/login.interface'
 import { fetch } from '../utils/fetch'
-import { ITodo, ITodoReq } from '../interfaces/todo.interface'
+import { ITodoReq } from '../interfaces/todo.interface'
 
 const prefix = 'todos'
 

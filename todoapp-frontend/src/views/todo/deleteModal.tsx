@@ -1,8 +1,7 @@
 import { Modal } from "antd"
 import { TodoStore } from "../../stores/todo.store"
-import { ITodo, ITodoReq } from "../../interfaces/todo.interface"
-import { useEffect, useState } from "react"
-import { createTodo, deleteTodo, updateTodo } from "../../actions/todo"
+import { ITodo  } from "../../interfaces/todo.interface"
+import { deleteTodo } from "../../actions/todo"
 
 
 
@@ -15,16 +14,6 @@ interface IProps {
 const TodoDeleteModal = (props: IProps) => {
     const { todo, handleFetch, handleClearModal } = props
     const { modalDeleteVisible, setModalDeleteVisible } = TodoStore()
-    const [todoData, setTodoData] = useState<ITodo>()
-
-    //   useEffect(() => {
-    //   }, []);
-
-    //   useEffect(() => {
-    //     if (todoData) {
-    //         setTodoData(todoData)
-    //     }
-    //   }, [todo]);
 
     const onDelete = async () => {
         try {
@@ -44,7 +33,7 @@ const TodoDeleteModal = (props: IProps) => {
         setModalDeleteVisible(false)
         handleClearModal()
     }
-    
+
     return <Modal
         open={modalDeleteVisible}
         onCancel={onCancel}
