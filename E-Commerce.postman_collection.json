@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "a90a5671-4b19-44aa-8207-03e5cde4b992",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28938710"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "username",
+								"value": "nutty",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "nutty",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/register?username=nuttyiiz&password=nut1234",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "nuttyiiz"
+								},
+								{
+									"key": "password",
+									"value": "nut1234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "nutty",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "nuttyiiz",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "nut1234",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "getAllProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/api/product/"
+					},
+					"response": []
+				},
+				{
+					"name": "getProductByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/api/product/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getUserProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImVkNWZiYjU5LThhM2MtNDUxYS1iYWQ2LWIxZjhkNDY0ZGZkYiIsImNyZWF0ZWQiOiIyMDIzLTA4LTAzVDE2OjIzOjEzLjE0OVoiLCJ1c2VySUQiOjEsImlhdCI6MTY5MTA3OTc5MywiZXhwIjoxNjkxNjg0NTkzfQ.JC8qdLfPYADhM5UwXkJUreWlXYvlp1t4DMad3KsmXiM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/api/user/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "getUserOrderHistory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImVkNWZiYjU5LThhM2MtNDUxYS1iYWQ2LWIxZjhkNDY0ZGZkYiIsImNyZWF0ZWQiOiIyMDIzLTA4LTAzVDE2OjIzOjEzLjE0OVoiLCJ1c2VySUQiOjEsImlhdCI6MTY5MTA3OTc5MywiZXhwIjoxNjkxNjg0NTkzfQ.JC8qdLfPYADhM5UwXkJUreWlXYvlp1t4DMad3KsmXiM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/api/user/orderHistory"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "getOrderByID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImVkNWZiYjU5LThhM2MtNDUxYS1iYWQ2LWIxZjhkNDY0ZGZkYiIsImNyZWF0ZWQiOiIyMDIzLTA4LTAzVDE2OjIzOjEzLjE0OVoiLCJ1c2VySUQiOjEsImlhdCI6MTY5MTA3OTc5MywiZXhwIjoxNjkxNjg0NTkzfQ.JC8qdLfPYADhM5UwXkJUreWlXYvlp1t4DMad3KsmXiM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:4000/api/order/5"
+					},
+					"response": []
+				},
+				{
+					"name": "CancelOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImVkNWZiYjU5LThhM2MtNDUxYS1iYWQ2LWIxZjhkNDY0ZGZkYiIsImNyZWF0ZWQiOiIyMDIzLTA4LTAzVDE2OjIzOjEzLjE0OVoiLCJ1c2VySUQiOjEsImlhdCI6MTY5MTA3OTc5MywiZXhwIjoxNjkxNjg0NTkzfQ.JC8qdLfPYADhM5UwXkJUreWlXYvlp1t4DMad3KsmXiM"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": "localhost:4000/api/order/6"
+					},
+					"response": []
+				},
+				{
+					"name": "createOrder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImVkNWZiYjU5LThhM2MtNDUxYS1iYWQ2LWIxZjhkNDY0ZGZkYiIsImNyZWF0ZWQiOiIyMDIzLTA4LTAzVDE2OjIzOjEzLjE0OVoiLCJ1c2VySUQiOjEsImlhdCI6MTY5MTA3OTc5MywiZXhwIjoxNjkxNjg0NTkzfQ.JC8qdLfPYADhM5UwXkJUreWlXYvlp1t4DMad3KsmXiM"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[   {\r\n        \"productID\": 1,\r\n        \"quantity\":1\r\n\r\n    },\r\n    {\r\n        \"productID\": 2,\r\n        \"quantity\":5\r\n\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:4000/api/order/createOrder"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
